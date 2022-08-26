@@ -1,4 +1,5 @@
 import React from "react";
+import NotFoundPage from "./NotFoundPage";
 import articleContent from "./article-content";
 import { useParams } from "react-router-dom";
 import ArticlesList from "../components/ArticleList";
@@ -6,7 +7,7 @@ const ArticlePage = () => {
   const { cat } = useParams();
   const article = articleContent.find((article) => article.name === cat);
 
-  if (!article) return <h1>Error: this page doesnot exist.</h1>;
+  if (!article) return <NotFoundPage const dog={cat} />;
 
   const otherArticles = articleContent.filter(
     (article) => article.name !== cat

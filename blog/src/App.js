@@ -1,4 +1,5 @@
 import HomePage from "./pages/HomePage";
+import NotFoundPage from "./pages/NotFoundPage";
 import AboutPage from "./pages/AboutPage";
 import ArticleListPage from "./pages/ArticleListPage";
 import ArticlePage from "./pages/ArticlePage";
@@ -17,6 +18,7 @@ function App() {
           <Route path="/about" element={<AboutPage />} exact />
           <Route path="/article-list" element={<ArticleListPage exact />} />
           <Route path="/article/:cat" element={<ArticlePage exact />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </div>
     </BrowserRouter>
