@@ -1,7 +1,0 @@
-{"t":{"$date":"2022-09-03T17:39:19.782+10:00"},"s":"I",  "c":"CONTROL",  "id":23285,   "ctx":"main","msg":"Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'"}
-{"t":{"$date":"2022-09-03T17:39:19.783+10:00"},"s":"I",  "c":"NETWORK",  "id":4915701, "ctx":"main","msg":"Initialized wire specification","attr":{"spec":{"incomingExternalClient":{"minWireVersion":0,"maxWireVersion":17},"incomingInternalClient":{"minWireVersion":0,"maxWireVersion":17},"outgoing":{"minWireVersion":6,"maxWireVersion":17},"isInternalClient":true}}}
-{"t":{"$date":"2022-09-03T17:39:19.784+10:00"},"s":"I",  "c":"NETWORK",  "id":4648602, "ctx":"main","msg":"Implicit TCP FastOpen in use."}
-{"t":{"$date":"2022-09-03T17:39:19.787+10:00"},"s":"I",  "c":"ACCESS",   "id":20254,   "ctx":"main","msg":"Read security file failed","attr":{"error":{"code":12,"codeName":"UnsupportedFormat","errmsg":"Only strings and sequences are supported for YAML key files"}}}
-{"t":{"$date":"2022-09-03T17:39:19.788+10:00"},"s":"I",  "c":"SHARDING", "id":5847201, "ctx":"main","msg":"Balancer command scheduler stop requested"}
-{"t":{"$date":"2022-09-03T17:39:19.789+10:00"},"s":"I",  "c":"ASIO",     "id":22582,   "ctx":"main","msg":"Killing all outstanding egress activity."}
-{"t":{"$date":"2022-09-03T17:39:19.789+10:00"},"s":"F",  "c":"CONTROL",  "id":20575,   "ctx":"main","msg":"Error creating service context","attr":{"error":"Location5579201: Unable to acquire security key[s]"}}

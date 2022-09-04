@@ -2,12 +2,18 @@ import express from "express";
 import mongoose from "mongoose";
 import { config } from "dotenv";
 import { MongoClient } from "mongodb";
+import path from "path";
+import { fileURLToPath } from "url";
 //const mongoose = require("mongoose");
 //const { config } = require("dotenv");
 const app = express();
 
 const PORT = 8000;
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+app.use(express.static(path.join(__dirname, "build")));
 app.use(express.json());
 
 const withDB = async (operations, res) => {
@@ -84,6 +90,10 @@ app.post("/api/articles/:name/add-comment", (req, res) => {
 
     res.status(200).json(updatedArticleInfo);
   }, res);
+});
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname + "/build/index.html"));
 });
 
 app.listen(PORT, () => {
